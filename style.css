@@ -276,7 +276,7 @@ footer {
 }
 
 
-/* ── Responsive: Medium ── */
+/*  Responsive: Medium Devices */ 
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
     .nav-inner {
@@ -350,7 +350,7 @@ footer {
     }
 }
 
-/* ── Responsive: Small ── */
+/*  Responsive: Small Devices */
 
 @media screen and (max-width: 576px) {
     .nav-inner {
