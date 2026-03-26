@@ -24,7 +24,9 @@ body {
     --background-color-2: rgba(53, 17, 101, 0.40);
 }
 
-.gradient-text {
+/* ── Typography ── */
+
+.gradient {
     background: linear-gradient(48deg,
             #F7E93F 16.53%,
             #FB09B4 49.82%,
@@ -33,94 +35,95 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
-.heading-font-1 {
+.title-xl {
     font-size: 60px;
     font-weight: 800;
     color: var(--text-color-white);
 }
 
-.heading-font-1-responsive {
+.title-responsive {
     font-size: clamp(24px, 4vw, 60px);
     font-weight: 800;
     color: var(--text-color-white);
 }
 
-.heading-font-2 {
+.title-lg {
     font-size: 48px;
     font-weight: 700;
     color: var(--text-color-white);
 }
 
-.heading-font-2-responsive {
+.title-lg-r {
     font-size: clamp(30px, 4vw, 48px);
     font-weight: 700;
     color: var(--text-color-white);
 }
 
-.heading-font-3 {
+.title-md {
     font-size: 32px;
     font-weight: 700;
     color: var(--text-color-white);
 }
 
-.heading-font-4 {
+.title-sm {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-color-white);
 }
 
-.regular-font-1 {
+.text {
     font-size: 16px;
     font-weight: 400;
     color: var(--text-color-white);
 }
 
-.regular-font-2 {
+.text-accent {
     font-size: 16px;
     font-weight: 400;
     color: var(--secondary-color-1);
 }
 
-.rating-font {
+.stat-num {
     font-size: 48px;
     font-weight: 900;
     color: var(--secondary-color-1);
 }
 
-.primary-btn {
+/* ── Buttons ── */
+
+.btn-primary {
     background: var(--gradient-color);
-    color: var(--primary-color);
+    color: var(--text-color-white);
     border-radius: 50px;
     padding: 10px 20px;
 }
 
-.primary-btn:hover {
+.btn-primary:hover {
     scale: 1.07;
     cursor: pointer;
 }
 
-.secondary-btn {
+.btn-secondary {
     color: var(--secondary-color-1);
     border: 2px solid var(--secondary-color-1);
     border-radius: 50px;
     padding: 10px 20px;
 }
 
-.secondary-btn:hover {
+.btn-secondary:hover {
     scale: 1.07;
     cursor: pointer;
     color: var(--primary-color);
     background: var(--secondary-color-1);
 }
 
-.nav-wrapper {
+/* ── Navigation ── */
+
+.nav-toggle {
     display: none;
 }
 
-
-/* navigation section */
-nav .heading-font-1 {
+nav .title-xl {
     font-size: clamp(24px, 4vw, 60px);
 }
 
@@ -136,25 +139,23 @@ nav ul a:hover {
     color: var(--secondary-color-2);
 }
 
-/* banner section */
-.banner-center-images {
+/* ── Banner ── */
+
+.banner-visual {
     background-image: url(assets/hero-bg.png);
     background-position: center;
     background-size: cover;
-}
-
-.banner-center-images {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
     align-items: center;
 }
 
-.banner-mic {
+.mic {
     transform: translateY(-260px);
 }
 
-.new-notification {
+.badge {
     background-color: var(--secondary-color-1);
     font-weight: 500;
     color: var(--primary-color);
@@ -175,34 +176,32 @@ nav ul a:hover {
     z-index: 0;
 }
 
-.banner-heading {
-    font-size: clamp(24px, 4vw, 60px);
-}
+/* ── Podcast / Stats ── */
 
-/* podcast section */
-
-.about-podcast {
+.about {
     margin: 60px 0px;
     border-bottom: 1px solid var(--border-color);
 }
 
-/* feature section */
+/* ── Features ── */
+
 .features {
     background-color: var(--background-color-1);
 }
 
-.feature-card {
+.card {
     background: var(--background-color-2);
     padding: 20px;
     border-radius: 20px;
 }
 
-.feature-card img {
+.card img {
     padding-bottom: 20px;
 }
 
-/* episode section */
-.youtube-video {
+/* ── Episodes ── */
+
+.video-card {
     background-color: var(--background-color-1);
     border-radius: 20px;
 }
@@ -213,13 +212,14 @@ iframe {
     border-top-right-radius: 20px;
 }
 
-/* host section */
-.host-card {
+/* ── Host ── */
+
+.host {
     background-color: var(--background-color-1);
     border-radius: 20px;
 }
 
-.host-icon {
+.social-icon {
     margin: 10px;
     padding: 10px;
     border: 1px solid var(--border-color);
@@ -227,17 +227,18 @@ iframe {
     transition: 0.5s ease;
 }
 
-.host-icon img {
+.social-icon img {
     width: 20px;
     height: auto;
 }
 
-.host-icon:hover {
+.social-icon:hover {
     scale: 1.1;
     cursor: pointer;
 }
 
-/* ✅ UPDATED footer section */
+/* ── Footer ── */
+
 footer {
     background-image: url(assets/footer-bg.png);
     background-position: center;
@@ -245,14 +246,14 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
-.footer-content {
+.footer-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 }
 
-.sponsor-container {
+.sponsors {
     flex-wrap: wrap;
     gap: 16px 40px;
     margin-bottom: 8px;
@@ -275,37 +276,36 @@ footer {
 }
 
 
-/* Responsive */
-/* medium device */
+/* ── Responsive: Medium ── */
 
 @media screen and (min-width: 577px) and (max-width: 992px) {
-    .nav-content {
+    .nav-inner {
         display: flex;
         justify-content: space-between;
         padding: 10px 20px;
     }
 
-    .nav-links {
+    .nav-menu {
         display: none;
     }
 
-    .nav-btn {
+    .nav-cta {
         display: none;
     }
 
-    .nav-wrapper {
+    .nav-toggle {
         display: block;
     }
 
-    .nav-wrapper:hover {
+    .nav-toggle:hover {
         cursor: pointer;
     }
 
-    .about-podcast {
+    .about {
         width: 80%;
     }
 
-    .rating-container {
+    .stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
@@ -313,12 +313,12 @@ footer {
         gap: 20px;
     }
 
-    .feature-card-container {
+    .card-grid {
         display: flex;
         flex-direction: column;
     }
 
-    .episode-videos {
+    .videos {
         width: 60%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -327,7 +327,7 @@ footer {
         gap: 20px;
     }
 
-    .host-card {
+    .host {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
@@ -336,54 +336,54 @@ footer {
         gap: 10px;
     }
 
-    .host-icon-container {
+    .social-links {
         justify-content: center;
     }
 
-    .footer-content {
+    .footer-inner {
         width: 80%;
     }
 
-    .sponsor-container {
+    .sponsors {
         justify-content: center;
         gap: 16px 24px;
     }
 }
 
-/* small device */
+/* ── Responsive: Small ── */
 
 @media screen and (max-width: 576px) {
-    .nav-content {
+    .nav-inner {
         display: flex;
         justify-content: space-between;
         padding: 10px 20px;
     }
 
-    .nav-links {
+    .nav-menu {
         display: none;
     }
 
-    .nav-btn {
+    .nav-cta {
         display: none;
     }
 
-    .nav-wrapper {
+    .nav-toggle {
         display: block;
     }
 
-    .nav-wrapper:hover {
+    .nav-toggle:hover {
         cursor: pointer;
     }
 
-    .about-podcast {
+    .about {
         width: 90%;
     }
 
-    .feature-content {
+    .features-inner {
         width: 90%;
     }
 
-    .rating-container {
+    .stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
@@ -391,12 +391,12 @@ footer {
         gap: 20px;
     }
 
-    .feature-card-container {
+    .card-grid {
         display: flex;
         flex-direction: column;
     }
 
-    .episode-videos {
+    .videos {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
@@ -404,7 +404,7 @@ footer {
         gap: 20px;
     }
 
-    .host-card {
+    .host {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
@@ -412,19 +412,19 @@ footer {
         text-align: center;
     }
 
-    .host-icon {
+    .social-icon {
         margin: 0;
     }
 
-    .host-icon-container {
+    .social-links {
         justify-content: center;
     }
 
-    .footer-content {
+    .footer-inner {
         width: 90%;
     }
 
-    .sponsor-container {
+    .sponsors {
         justify-content: center;
         gap: 12px 20px;
     }
